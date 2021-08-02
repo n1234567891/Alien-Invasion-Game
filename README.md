@@ -4,7 +4,7 @@ In this game, aliens have invaded our planet, we need to place defenders to stop
 
 [Click here to play the game!](https://n1234567891.github.io/Alien-Invasion-Game/)
 
-Thanks to [Franks Laboratory](https://www.youtube.com/c/Frankslaboratory/featured) for amazing javascript game tutorials.
+Thanks [Franks Laboratory](https://www.youtube.com/c/Frankslaboratory/featured) for amazing javascript game tutorials.
 
 ### Here are some screenshots of the game :
 ------------------
