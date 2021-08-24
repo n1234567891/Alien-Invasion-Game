@@ -340,7 +340,15 @@ const bottom_card2 = {
         x : 600,
         y : 510,
         width : 250,
-        height : 80,
+        height : 35,
+}
+
+const bottom_card3 = {
+
+        x : 600,
+        y : 555,
+        width : 250,
+        height : 35,
 }
 
 
@@ -400,14 +408,16 @@ function chooseDefenders() {
         ctx.strokeStyle = 'black';
         ctx.strokeRect(bottom_card1.x, bottom_card1.y, bottom_card1.width, bottom_card1.height);
         ctx.strokeRect(bottom_card2.x, bottom_card2.y, bottom_card2.width, bottom_card2.height);
+        ctx.strokeRect(bottom_card3.x, bottom_card3.y, bottom_card3.width, bottom_card3.height);
 
 
         ctx.fillStyle = 'black';
-        ctx.font = '25px Arial';
-        ctx.fillText('Choose defenders at top to stop the aliens,', bottom_card1.x + 10, bottom_card1.y + 30);
-        ctx.fillText('make sure aliens do not cross left side', bottom_card1.x + 10, bottom_card1.y + 60);
-        ctx.fillText('Reload the page', bottom_card2.x + 10, bottom_card2.y + 30);
-        ctx.fillText('to restart the game', bottom_card2.x + 10, bottom_card2.y + 60);
+        ctx.font = '20px Arial';
+        ctx.fillText('Choose defenders at top and place them on field to', bottom_card1.x + 10, bottom_card1.y + 30);
+        ctx.fillText('stop aliens, make sure aliens do not cross left side', bottom_card1.x + 10, bottom_card1.y + 60);
+        ctx.font = '15px Arial';
+        ctx.fillText('Reload the page to restart the game', bottom_card2.x + 10, bottom_card2.y + 25);
+        ctx.fillText('Created by - Nilesh Kumar Sahu', bottom_card3.x + 10, bottom_card3.y + 25);
 
 
         ctx.font = '20px Arial';
@@ -879,7 +889,7 @@ window.addEventListener('resize', function() {
 const river1 = new Image();
 river1.src = 'river.jpg';
 
-const lcm = 4158000;
+//const lcm = 4158000;
 
 
 function animate() {
@@ -899,12 +909,17 @@ function animate() {
             handleResources();
             handlefloatingMessages();
             handleParticles();
+
+
            
-            if(frame < lcm - 1) {
+         /*   if(frame < lcm - 1) {
                     frame++;
-            } else {
+            } else
                     frame = 0;
             }
+
+        */
+            frame++;
            
            if(!gameOver)  {
 
