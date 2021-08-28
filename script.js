@@ -528,16 +528,20 @@ function handleDefenders() {
                             if(collision1(defenders[i], enemies[j])) {
                                     
                                     defenders[i].health -= 0.2;
-                                    enemies[j].movement = 0;
+                                     
+                                    if(defenders[i].health <= 0) {   
+
+                                                defenders.splice(i, 1);   
+                                                enemies[j].movement = enemies[j].speed;
+                                                i--;
+                                                break;
+                                      } else {
+                                                enemies[j].movement = 0;
+                                      }
+                                    
                             }
 
-                            if(defenders[i].health <= 0) {   
-
-                                    defenders.splice(i, 1);   
-                                    enemies[j].movement = enemies[j].speed;
-                                    i--;
-                                    break;
-                            }
+                            
                 }
         }
 }
